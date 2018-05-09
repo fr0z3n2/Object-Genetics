@@ -7,27 +7,25 @@ package crossable;
 
 /**
  *
- * @author fr0z3n2
+ * @author Logan Stanfield
+ * @author Mike Resnik
  */
-public class CrossableInteger extends Crossable<Integer, CrossableInteger>{
+public class CrossableInteger extends Crossable<Integer, CrossableInteger> {
 
-    public CrossableInteger(Integer value) {
+    public CrossableInteger(int value) {
         super(value);
     }
 
     @Override
     public CrossableInteger cross(CrossableInteger toCross) {
-        
-        int val1 = this.value.intValue();
-        int val2 = toCross.getValue().intValue();
-        
-        int val3 = (val1+val2)/2;
-        
+
+        int val1 = this.value;
+        int val2 = toCross.getValue();
+
+        int val3 = (val1 + val2) / 2;
+
         return new CrossableInteger(val3);
-        
-    
+
     }
 
-
-    
 }

@@ -12,45 +12,44 @@ import crossable.Crossable;
 
 /**
  *
- * @author fr0z3n2
+ * @author Logan Stanfield
+ * @author Mike Resnik
  */
 public class Car implements Breedable<Car> {
+
     private Wheel[] wheels;
 
     public Car(Wheel[] wheels) {
         this.wheels = wheels;
     }
 
-    
-    
     @Override
     public List<Breedable> getBreedableContents() {
         List<Breedable> retList = new ArrayList();
-        for(Wheel w : wheels){
+        for (Wheel w : wheels) {
             retList.add(w);
         }
         return retList;
 
     }
-   
-    public Wheel[] getWheels(){
+
+    public Wheel[] getWheels() {
         return this.wheels;
-    } 
+    }
 
     @Override
     public Car generator(List<Breedable> breedableContents, List<Crossable> crossableContents) {
         List<Wheel> wheel_list = new ArrayList();
-        for(Breedable e : breedableContents){
-            if(e.getClass().equals(Wheel.class)){
-                wheel_list.add((Wheel)e);
+        for (Breedable e : breedableContents) {
+            if (e.getClass().equals(Wheel.class)) {
+                wheel_list.add((Wheel) e);
             }
         }
         Wheel[] w_make = new Wheel[wheel_list.size()];
         w_make = wheel_list.toArray(w_make);
-        
+
         return new Car(w_make);
-            
-       
+
     }
 
     @Override

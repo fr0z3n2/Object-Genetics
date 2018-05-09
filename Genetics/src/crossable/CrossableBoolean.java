@@ -7,18 +7,19 @@ package crossable;
 
 /**
  *
- * @author fr0z3n2
+ * @author Logan Stanfield
+ * @author Mike Resnik
  */
 public class CrossableBoolean extends Crossable<Boolean, CrossableBoolean>{
 
-    public CrossableBoolean(Boolean value) {
+    public CrossableBoolean(boolean value) {
         super(value);
     }
 
     @Override
     public CrossableBoolean cross(CrossableBoolean toCross) {
-        boolean val1 = this.value.booleanValue();
-        boolean val2 = toCross.getValue().booleanValue();
+        boolean val1 = this.value;
+        boolean val2 = toCross.getValue();
         
         boolean val3 = (Math.random()>0.5 ? val1 : val2);
         

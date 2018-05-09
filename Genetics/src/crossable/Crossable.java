@@ -7,16 +7,17 @@ package crossable;
 
 /**
  *
- * @author fr0z3n2
+ * @author Logan Stanfield
+ * @author Mike Resnik
  */
 public abstract class Crossable<T, K extends Crossable> {
- 
+
     protected T value;
-    
-    public Crossable(T value){
+
+    public Crossable(T value) {
         this.value = value;
     }
-    
+
     public abstract K cross(K toCross);
 
     public T getValue() {
@@ -27,10 +28,5 @@ public abstract class Crossable<T, K extends Crossable> {
     public String toString() {
         return "Crossable{" + "value=" + value + '}';
     }
-    
-    
-    
-    
-    
-    
+
 }

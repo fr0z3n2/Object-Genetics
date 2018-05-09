@@ -7,11 +7,12 @@ package crossable;
 
 /**
  *
- * @author fr0z3n2
+ * @author Logan Stanfield
+ * @author Mike Resnik
  */
 public class CrossableDouble extends Crossable<Double, CrossableDouble>{
     
-    public CrossableDouble(Double value) {
+    public CrossableDouble(double value) {
         super(value);
     }
 

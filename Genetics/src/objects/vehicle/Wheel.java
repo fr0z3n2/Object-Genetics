@@ -15,11 +15,11 @@ import crossable.CrossableInteger;
 import java.util.Arrays;
 
 /**
- *
- * @author fr0z3n2
+ * @author Logan Stanfield
+ * @author Mike Resnik
  */
 public class Wheel implements Breedable<Wheel> {
-    
+
     CrossableInteger spokes;
     CrossableBoolean hubCap;
     CrossableFloat size;
@@ -33,11 +33,7 @@ public class Wheel implements Breedable<Wheel> {
     public Wheel(int spokeVal, boolean hubCapVal, float sizeVal) {
         this(new CrossableInteger(spokeVal), new CrossableBoolean(hubCapVal), new CrossableFloat(sizeVal));
     }
-    
-    
 
-    
-    
     @Override
     public List<Breedable> getBreedableContents() {
         return new ArrayList();
@@ -46,12 +42,12 @@ public class Wheel implements Breedable<Wheel> {
     @Override
     public Wheel generator(List<Breedable> breedableContents, List<Crossable> crossableContents) {
         // breedableContents dont matter
-        
+
         return new Wheel(
-                (CrossableInteger) crossableContents.get(0), 
-                (CrossableBoolean) crossableContents.get(1), 
+                (CrossableInteger) crossableContents.get(0),
+                (CrossableBoolean) crossableContents.get(1),
                 (CrossableFloat) crossableContents.get(2));
-        
+
     }
 
     @Override
@@ -65,8 +61,5 @@ public class Wheel implements Breedable<Wheel> {
     public String toString() {
         return "Wheel{" + "spokes=" + spokes + ", hubCap=" + hubCap + ", size=" + size + '}';
     }
-    
-    
-
 
 }

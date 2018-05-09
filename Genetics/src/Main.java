@@ -10,7 +10,8 @@ import objects.vehicle.Wheel;
 
 /**
  *
- * @author fr0z3n2
+ * @author Logan Stanfield
+ * @author Mike Resnik
  */
 public class Main {
  
@@ -23,7 +24,6 @@ public class Main {
         Wheel w2 = new Wheel(5, false, 10.0f);
         
         Wheel w3 = w1.breed(w2);
-        
         
         System.out.println(Arrays.toString(new Wheel[]{w1,w2, w3}));
         

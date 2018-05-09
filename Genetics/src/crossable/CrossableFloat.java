@@ -7,25 +7,25 @@ package crossable;
 
 /**
  *
- * @author fr0z3n2
+ * @author Logan Stanfield
+ * @authro Mike Resnik
  */
-public class CrossableFloat extends Crossable<Float, CrossableFloat>{
+public class CrossableFloat extends Crossable<Float, CrossableFloat> {
 
-    public CrossableFloat(Float value) {
+    public CrossableFloat(float value) {
         super(value);
     }
 
     @Override
     public CrossableFloat cross(CrossableFloat toCross) {
-     
-        float val1 = this.value.floatValue();
-        float val2 = toCross.getValue().floatValue();
-        
-        float val3 = (val1+val2)/2;
-        
+
+        float val1 = this.value;
+        float val2 = toCross.getValue();
+
+        float val3 = (val1 + val2) / 2;
+
         return new CrossableFloat(val3);
-        
+
     }
-    
-    
+
 }
